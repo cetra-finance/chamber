@@ -1,0 +1,29 @@
+[package]
+name = "cetra-chamber"
+version = "0.1.0"
+edition = "2021"
+description = ""
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+solana-security-txt = "1.0.1"
+anchor-lang = "0.24.2"
+anchor-spl = "0.24.2"
+tulipv2-sdk-levfarm = { git = "https://github.com/sol-farm/tulipv2-sdk" }
+tulipv2-sdk-common = { git = "https://github.com/sol-farm/tulipv2-sdk" }
+tulipv2-sdk-vaults = { git = "https://github.com/sol-farm/tulipv2-sdk" }
+
+[dev-dependencies]
+cetra-program-test = { path = "/Users/b3zrazli4n0/Desktop/program-test" }
+solana-sdk = "1.9.18"
